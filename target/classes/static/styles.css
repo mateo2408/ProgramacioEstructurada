@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: white;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin-bottom: 10px;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    align-items: start;
+}
+
+.add-score-section {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+}
+
+.add-score-section h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.danger {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%) !important;
+}
+
+.scoreboard-section {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+}
+
+.scoreboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.scoreboard-header h2 {
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-controls {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-controls select {
+    padding: 8px 12px;
+    border: 2px solid #e1e5e9;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.score-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.score-table th,
+.score-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e1e5e9;
+}
+
+.score-table th {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    font-weight: 600;
+    color: #495057;
+    position: sticky;
+    top: 0;
+}
+
+.score-table tbody tr:hover {
+    background-color: #f8f9fa;
+    transform: scale(1.01);
+    transition: all 0.2s ease;
+}
+
+.score-table .rank {
+    font-weight: bold;
+    color: #667eea;
+}
+
+.score-table .rank:nth-child(1) { color: #ffd700; }
+.score-table .rank:nth-child(2) { color: #c0c0c0; }
+.score-table .rank:nth-child(3) { color: #cd7f32; }
+
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+.error {
+    background: #fee;
+    color: #c33;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #fcc;
+}
+
+.success {
+    background: #efe;
+    color: #363;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #cfc;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .scoreboard-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+
+    .controls {
+        justify-content: center;
+    }
+}

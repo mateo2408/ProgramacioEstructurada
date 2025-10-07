@@ -1,0 +1,11 @@
+com/example/restservice/Quote.class
+com/example/restservice/QuoteController.class
+com/example/restservice/Greeting.class
+com/example/restservice/WebController.class
+com/example/restservice/QuoteService.class
+com/example/restservice/ScoreboardController$ScoreRequest.class
+com/example/restservice/RestServiceApplication.class
+com/example/restservice/Score.class
+com/example/restservice/ScoreboardController.class
+com/example/restservice/ScoreboardService.class
+com/example/restservice/GreetingController.class
